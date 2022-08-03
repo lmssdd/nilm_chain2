@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import torch.utils.data as data
 from tqdm import trange
-store=pd.HDFStore('../data/ukdale/ukdale_h5')
+#store=pd.HDFStore('../data/ukdale/ukdale_h5')
 
 
 def resample_meter_ukdale(store=None, building=1, meter=1, period='1min', cutoff=1000.):

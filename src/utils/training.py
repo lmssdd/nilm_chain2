@@ -20,9 +20,9 @@ def train_model(model, batch_size, n_epochs, filename, train_loader, valid_loade
         ###################
         model.train() # prep model for training
         for batch, (data, target_power, target_status) in enumerate(train_loader, 1):
-            data = data.unsqueeze(1)#.cuda()
-            target_power = target_power#.cuda()
-            target_status = target_status#.cuda()
+            data = data.unsqueeze(1).cuda()
+            target_power = target_power.cuda()
+            target_status = target_status.cuda()
             
             # clear the gradients of all optimized variables
             optimizer.zero_grad()
@@ -42,9 +42,9 @@ def train_model(model, batch_size, n_epochs, filename, train_loader, valid_loade
         ######################
         model.eval() # prep model for evaluation
         for data, target_power, target_status in valid_loader:
-            data = data.unsqueeze(1)#.cuda()
-            target_power = target_power#.cuda()
-            target_status = target_status#.cuda()
+            data = data.unsqueeze(1).cuda()
+            target_power = target_power.cuda()
+            target_status = target_status.cuda()
             
             # forward pass: compute predicted outputs by passing inputs to the model
             output_status = model(data).permute(0,2,1)
@@ -58,9 +58,9 @@ def train_model(model, batch_size, n_epochs, filename, train_loader, valid_loade
         ##################
         model.eval() # prep model for evaluation
         for data, target_power, target_status in test_loader:
-            data = data.unsqueeze(1)#.cuda()
-            target_power = target_power#.cuda()
-            target_status = target_status#.cuda()
+            data = data.unsqueeze(1).cuda()
+            target_power = target_power.cuda()
+            target_status = target_status.cuda()
             
             # forward pass: compute predicted outputs by passing inputs to the model
             output_status = model(data).permute(0,2,1)

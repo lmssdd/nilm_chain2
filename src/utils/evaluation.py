@@ -16,7 +16,7 @@ def evaluate_activation(model, loader, a, border):
     model.eval()
     with torch.no_grad():
         for x, p, s in loader:
-            x = x.unsqueeze(1)#.cuda()
+            x = x.unsqueeze(1).cuda()
             p = p.permute(0,2,1)[:,a,:]
             s = s.permute(0,2,1)[:,a,:]
             
