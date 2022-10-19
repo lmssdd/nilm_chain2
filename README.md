@@ -1,6 +1,6 @@
 # nilm_chain2
 
-Temporal Pooling NILM applied to Chain 2 signal from Open Meter
+Temporal Pooling NILM applied to Chain 2 signal, communication standard for Italian 2nd generation smart meters.
 
 The [paper](https://sciendo.com/article/10.2478/caim-2022-0004 "Deep learning based non-intrusive load monitoring with low resolution data from smart meters" was published in Communications in Applied and Industrial Mathematics, Volume 13 (2022) - Issue 1 (January 2022)
 
